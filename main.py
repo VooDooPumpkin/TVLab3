@@ -17,10 +17,7 @@ def bernuli(p, n, m2, m1 = 0):
 
 #Polinomal formula
 def polinomal(n, k, arrayM, arrayP):
-    res = 1
-    res *= combi.combinatorics.fac(n)
-    for i in range(k):
-        res /= combi.combinatorics.fac(int(arrayM[i]))
+    res = combi.combinatorics.permWithRep(n, arrayM)
     for i in range(k):
         res*= float(arrayP[i]) ** int(arrayM[i])
     return res
