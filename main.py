@@ -1,5 +1,6 @@
 import sys
 import math
+import combinatorics.py
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
