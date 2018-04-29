@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>890</width>
-    <height>805</height>
+    <width>512</width>
+    <height>652</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -305,7 +305,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="bernP"/>
+        <widget class="QDoubleSpinBox" name="bernP"/>
        </item>
       </layout>
      </item>
@@ -446,6 +446,9 @@
     <widget class="QPushButton" name="getResult">
      <property name="text">
       <string>Получить результат</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

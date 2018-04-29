@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(890, 805)
+        Dialog.resize(512, 652)
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout_13.setObjectName("verticalLayout_13")
         self.label = QtWidgets.QLabel(Dialog)
@@ -145,7 +145,7 @@ class Ui_Dialog(object):
         self.label_6 = QtWidgets.QLabel(Dialog)
         self.label_6.setObjectName("label_6")
         self.verticalLayout_5.addWidget(self.label_6)
-        self.bernP = QtWidgets.QSpinBox(Dialog)
+        self.bernP = QtWidgets.QDoubleSpinBox(Dialog)
         self.bernP.setObjectName("bernP")
         self.verticalLayout_5.addWidget(self.bernP)
         self.layout_Bernuli.addLayout(self.verticalLayout_5)
@@ -238,6 +238,7 @@ class Ui_Dialog(object):
         self.textResult.setObjectName("textResult")
         self.verticalLayout_13.addWidget(self.textResult)
         self.getResult = QtWidgets.QPushButton(Dialog)
+        self.getResult.setAutoDefault(False)
         self.getResult.setObjectName("getResult")
         self.verticalLayout_13.addWidget(self.getResult)
 
