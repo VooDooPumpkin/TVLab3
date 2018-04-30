@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>512</width>
+    <width>518</width>
     <height>652</height>
    </rect>
   </property>
@@ -25,12 +25,17 @@
     <widget class="QComboBox" name="chooseFormula">
      <item>
       <property name="text">
-       <string>Формула Бернули</string>
+       <string>Формула Бернулли</string>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Полиномиальная формула</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Интегральная теорема Муавра - Лапласа</string>
       </property>
      </item>
     </widget>
@@ -39,6 +44,12 @@
     <widget class="QLabel" name="FormulaView">
      <property name="text">
       <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -300,12 +311,16 @@
        <item>
         <widget class="QLabel" name="label_6">
          <property name="text">
-          <string>p</string>
+          <string>Введите вероятность союытия p:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QDoubleSpinBox" name="bernP"/>
+        <widget class="QDoubleSpinBox" name="bernP">
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -316,12 +331,16 @@
          <item>
           <widget class="QLabel" name="label_7">
            <property name="text">
-            <string>n</string>
+            <string>Введите количество испытаний n:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="bernN"/>
+          <widget class="QSpinBox" name="bernN">
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -330,12 +349,16 @@
          <item>
           <widget class="QLabel" name="label_8">
            <property name="text">
-            <string>m</string>
+            <string>Введите границу числа появлений события m:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="bernM"/>
+          <widget class="QSpinBox" name="bernM">
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -348,12 +371,16 @@
          <item>
           <widget class="QLabel" name="label_9">
            <property name="text">
-            <string>m1</string>
+            <string>Введите границу числа появлений события m1:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="bernM1"/>
+          <widget class="QSpinBox" name="bernM1">
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -362,12 +389,16 @@
          <item>
           <widget class="QLabel" name="label_10">
            <property name="text">
-            <string>m2</string>
+            <string>Введите границу числа появлений события m2:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="bernM2"/>
+          <widget class="QSpinBox" name="bernM2">
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -384,12 +415,16 @@
          <item>
           <widget class="QLabel" name="label_11">
            <property name="text">
-            <string>n</string>
+            <string>Введите количество испытаний n:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="poliN"/>
+          <widget class="QSpinBox" name="poliN">
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -398,12 +433,16 @@
          <item>
           <widget class="QLabel" name="label_12">
            <property name="text">
-            <string>k</string>
+            <string>Введите количество событий k:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="poliK"/>
+          <widget class="QSpinBox" name="poliK">
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -414,7 +453,7 @@
        <item>
         <widget class="QLabel" name="label_13">
          <property name="text">
-          <string>m</string>
+          <string>Введите количество появлений каждого события m, разделяя их пробелом:</string>
          </property>
         </widget>
        </item>
@@ -428,7 +467,7 @@
        <item>
         <widget class="QLabel" name="label_14">
          <property name="text">
-          <string>p</string>
+          <string>Введите вероятности появления союытий p, разделяя их пробелом:</string>
          </property>
         </widget>
        </item>
@@ -438,6 +477,20 @@
       </layout>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_15">
+     <property name="text">
+      <string>Результат:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="showBernRes">
+     <property name="text">
+      <string>Показать результат полученный по формуле Бернулли</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QTextBrowser" name="textResult"/>
